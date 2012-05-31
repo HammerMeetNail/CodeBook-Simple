@@ -1,3 +1,5 @@
+## Creates a dictionary wherein numerical keys are paired with letters
+
 def buildCodeBook():
     letters = 'abcdefghijklmnopqrstuvwxyz.'
     CodeBook = {}
@@ -6,6 +8,8 @@ def buildCodeBook():
         CodeBook[key] = i
         key += 1
     return CodeBook
+
+## Checks dictionary for corresponding values and prints decrypted message 
 
 def decode(encrypted, CodeBook):
     decrypted = ''
@@ -17,5 +21,7 @@ def decode(encrypted, CodeBook):
     return decrypted
     
 CodeBook = buildCodeBook()
-encrypted = (15, 3, 15, 14, 14, 15, 18, 23, 15, 18, 11, 0, 7, 13, 1, 9, 12, 27, 3, 15, 13)
+encrypted = (15, 3, 15, 14, 14, 15, 18, 23, 15, 18, 11, 0,
+             7, 13, 1, 9, 12, 27, 3, 15, 13)
+
 print decode(encrypted, CodeBook)
